@@ -3,17 +3,446 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz de Vocabulário Alemão A1</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Aprenda Alemão - Nível A1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .question {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .answer {
+            font-size: 20px;
+            color: green;
+            display: none;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
-    <div class="quiz-container">
-        <h1>Aprenda Alemão - Nível A1</h1>
-        <div id="quiz"></div>
-        <button id="next-btn" onclick="nextQuestion()">Próxima Pergunta</button>
-        <p id="score">Pontuação: 0</p>
-    </div>
+    <h1>Aprenda Alemão - Nível A1</h1>
 
-    <script src="script.js"></script>
+    <!-- 100 Perguntas e Respostas -->
+    <div class="question">Como se diz "cachorro" em alemão?</div>
+    <button onclick="showAnswer('answer1')">Mostrar Resposta</button>
+    <p id="answer1" class="answer">Hund</p>
+
+    <div class="question">Como se diz "gato" em alemão?</div>
+    <button onclick="showAnswer('answer2')">Mostrar Resposta</button>
+    <p id="answer2" class="answer">Katze</p>
+
+    <div class="question">Como se diz "casa" em alemão?</div>
+    <button onclick="showAnswer('answer3')">Mostrar Resposta</button>
+    <p id="answer3" class="answer">Haus</p>
+
+    <div class="question">Como se diz "livro" em alemão?</div>
+    <button onclick="showAnswer('answer4')">Mostrar Resposta</button>
+    <p id="answer4" class="answer">Buch</p>
+
+    <div class="question">Como se diz "mesa" em alemão?</div>
+    <button onclick="showAnswer('answer5')">Mostrar Resposta</button>
+    <p id="answer5" class="answer">Tisch</p>
+
+    <div class="question">Como se diz "porta" em alemão?</div>
+    <button onclick="showAnswer('answer6')">Mostrar Resposta</button>
+    <p id="answer6" class="answer">Tür</p>
+
+    <div class="question">Como se diz "janela" em alemão?</div>
+    <button onclick="showAnswer('answer7')">Mostrar Resposta</button>
+    <p id="answer7" class="answer">Fenster</p>
+
+    <div class="question">Como se diz "cadeira" em alemão?</div>
+    <button onclick="showAnswer('answer8')">Mostrar Resposta</button>
+    <p id="answer8" class="answer">Stuhl</p>
+
+    <div class="question">Como se diz "mesa de jantar" em alemão?</div>
+    <button onclick="showAnswer('answer9')">Mostrar Resposta</button>
+    <p id="answer9" class="answer">Esstisch</p>
+
+    <div class="question">Como se diz "livraria" em alemão?</div>
+    <button onclick="showAnswer('answer10')">Mostrar Resposta</button>
+    <p id="answer10" class="answer">Buchhandlung</p>
+
+    <div class="question">Como se diz "carro" em alemão?</div>
+    <button onclick="showAnswer('answer11')">Mostrar Resposta</button>
+    <p id="answer11" class="answer">Auto</p>
+
+    <div class="question">Como se diz "avião" em alemão?</div>
+    <button onclick="showAnswer('answer12')">Mostrar Resposta</button>
+    <p id="answer12" class="answer">Flugzeug</p>
+
+    <div class="question">Como se diz "caminhão" em alemão?</div>
+    <button onclick="showAnswer('answer13')">Mostrar Resposta</button>
+    <p id="answer13" class="answer">Lkw (Lastkraftwagen)</p>
+
+    <div class="question">Como se diz "moto" em alemão?</div>
+    <button onclick="showAnswer('answer14')">Mostrar Resposta</button>
+    <p id="answer14" class="answer">Motorrad</p>
+
+    <div class="question">Como se diz "bicicleta" em alemão?</div>
+    <button onclick="showAnswer('answer15')">Mostrar Resposta</button>
+    <p id="answer15" class="answer">Fahrrad</p>
+
+    <div class="question">Como se diz "ônibus" em alemão?</div>
+    <button onclick="showAnswer('answer16')">Mostrar Resposta</button>
+    <p id="answer16" class="answer">Bus</p>
+
+    <div class="question">Como se diz "trem" em alemão?</div>
+    <button onclick="showAnswer('answer17')">Mostrar Resposta</button>
+    <p id="answer17" class="answer">Zug</p>
+
+    <div class="question">Como se diz "barco" em alemão?</div>
+    <button onclick="showAnswer('answer18')">Mostrar Resposta</button>
+    <p id="answer18" class="answer">Schiff</p>
+
+    <div class="question">Como se diz "hotel" em alemão?</div>
+    <button onclick="showAnswer('answer19')">Mostrar Resposta</button>
+    <p id="answer19" class="answer">Hotel</p>
+
+    <div class="question">Como se diz "restaurante" em alemão?</div>
+    <button onclick="showAnswer('answer20')">Mostrar Resposta</button>
+    <p id="answer20" class="answer">Restaurant</p>
+
+    <div class="question">Como se diz "amigo" em alemão?</div>
+    <button onclick="showAnswer('answer21')">Mostrar Resposta</button>
+    <p id="answer21" class="answer">Freund</p>
+
+    <div class="question">Como se diz "irmão" em alemão?</div>
+    <button onclick="showAnswer('answer22')">Mostrar Resposta</button>
+    <p id="answer22" class="answer">Bruder</p>
+
+    <div class="question">Como se diz "irmã" em alemão?</div>
+    <button onclick="showAnswer('answer23')">Mostrar Resposta</button>
+    <p id="answer23" class="answer">Schwester</p>
+
+    <div class="question">Como se diz "mãe" em alemão?</div>
+    <button onclick="showAnswer('answer24')">Mostrar Resposta</button>
+    <p id="answer24" class="answer">Mutter</p>
+
+    <div class="question">Como se diz "pai" em alemão?</div>
+    <button onclick="showAnswer('answer25')">Mostrar Resposta</button>
+    <p id="answer25" class="answer">Vater</p>
+
+    <div class="question">Como se diz "filho" em alemão?</div>
+    <button onclick="showAnswer('answer26')">Mostrar Resposta</button>
+    <p id="answer26" class="answer">Sohn</p>
+
+    <div class="question">Como se diz "filha" em alemão?</div>
+    <button onclick="showAnswer('answer27')">Mostrar Resposta</button>
+    <p id="answer27" class="answer">Tochter</p>
+
+    <div class="question">Como se diz "amizade" em alemão?</div>
+    <button onclick="showAnswer('answer28')">Mostrar Resposta</button>
+    <p id="answer28" class="answer">Freundschaft</p>
+
+    <div class="question">Como se diz "coração" em alemão?</div>
+    <button onclick="showAnswer('answer29')">Mostrar Resposta</button>
+    <p id="answer29" class="answer">Herz</p>
+
+    <div class="question">Como se diz "sol" em alemão?</div>
+    <button onclick="showAnswer('answer30')">Mostrar Resposta</button>
+    <p id="answer30" class="answer">Sonne</p>
+
+    <div class="question">Como se diz "lua" em alemão?</div>
+    <button onclick="showAnswer('answer31')">Mostrar Resposta</button>
+    <p id="answer31" class="answer">Mond</p>
+
+    <div class="question">Como se diz "estrela" em alemão?</div>
+    <button onclick="showAnswer('answer32')">Mostrar Resposta</button>
+    <p id="answer32" class="answer">Stern</p>
+
+    <div class="question">Como se diz "céu" em alemão?</div>
+    <button onclick="showAnswer('answer33')">Mostrar Resposta</button>
+    <p id="answer33" class="answer">Himmel</p>
+
+    <div class="question">Como se diz "chuva" em alemão?</div>
+    <button onclick="showAnswer('answer34')">Mostrar Resposta</button>
+    <p id="answer34" class="answer">Regen</p>
+
+    <div class="question">Como se diz "neve" em alemão?</div>
+    <button onclick="showAnswer('answer35')">Mostrar Resposta</button>
+    <p id="answer35" class="answer">Schnee</p>
+
+    <div class="question">Como se diz "vento" em alemão?</div>
+    <button onclick="showAnswer('answer36')">Mostrar Resposta</button>
+    <p id="answer36" class="answer">Wind</p>
+
+    <div class="question">Como se diz "árvore" em alemão?</div>
+    <button onclick="showAnswer('answer37')">Mostrar Resposta</button>
+    <p id="answer37" class="answer">Baum</p>
+
+    <div class="question">Como se diz "flor" em alemão?</div>
+    <button onclick="showAnswer('answer38')">Mostrar Resposta</button>
+    <p id="answer38" class="answer">Blume</p>
+
+    <div class="question">Como se diz "animal" em alemão?</div>
+    <button onclick="showAnswer('answer39')">Mostrar Resposta</button>
+    <p id="answer39" class="answer">Tier</p>
+
+    <div class="question">Como se diz "pássaro" em alemão?</div>
+    <button onclick="showAnswer('answer40')">Mostrar Resposta</button>
+    <p id="answer40" class="answer">Vogel</p>
+
+    <div class="question">Como se diz "peixe" em alemão?</div>
+    <button onclick="showAnswer('answer41')">Mostrar Resposta</button>
+    <p id="answer41" class="answer">Fisch</p>
+
+    <div class="question">Como se diz "urso" em alemão?</div>
+    <button onclick="showAnswer('answer42')">Mostrar Resposta</button>
+    <p id="answer42" class="answer">Bär</p>
+
+    <div class="question">Como se diz "leão" em alemão?</div>
+    <button onclick="showAnswer('answer43')">Mostrar Resposta</button>
+    <p id="answer43" class="answer">Löwe</p>
+
+    <div class="question">Como se diz "tigre" em alemão?</div>
+    <button onclick="showAnswer('answer44')">Mostrar Resposta</button>
+    <p id="answer44" class="answer">Tiger</p>
+
+    <div class="question">Como se diz "elefante" em alemão?</div>
+    <button onclick="showAnswer('answer45')">Mostrar Resposta</button>
+    <p id="answer45" class="answer">Elefant</p>
+
+    <div class="question">Como se diz "girafa" em alemão?</div>
+    <button onclick="showAnswer('answer46')">Mostrar Resposta</button>
+    <p id="answer46" class="answer">Giraffe</p>
+
+    <div class="question">Como se diz "macaco" em alemão?</div>
+    <button onclick="showAnswer('answer47')">Mostrar Resposta</button>
+    <p id="answer47" class="answer">Affe</p>
+
+    <div class="question">Como se diz "cavalo" em alemão?</div>
+    <button onclick="showAnswer('answer48')">Mostrar Resposta</button>
+    <p id="answer48" class="answer">Pferd</p>
+
+    <div class="question">Como se diz "vaca" em alemão?</div>
+    <button onclick="showAnswer('answer49')">Mostrar Resposta</button>
+    <p id="answer49" class="answer">Kuh</p>
+
+    <div class="question">Como se diz "ovelha" em alemão?</div>
+    <button onclick="showAnswer('answer50')">Mostrar Resposta</button>
+    <p id="answer50" class="answer">Schaf</p>
+
+    <!-- Continuar até o 100º item -->
+    <div class="question">Como se diz "porco" em alemão?</div>
+    <button onclick="showAnswer('answer51')">Mostrar Resposta</button>
+    <p id="answer51" class="answer">Schwein</p>
+
+    <div class="question">Como se diz "cabra" em alemão?</div>
+    <button onclick="showAnswer('answer52')">Mostrar Resposta</button>
+    <p id="answer52" class="answer">Ziege</p>
+
+    <div class="question">Como se diz "galo" em alemão?</div>
+    <button onclick="showAnswer('answer53')">Mostrar Resposta</button>
+    <p id="answer53" class="answer">Hahn</p>
+
+    <div class="question">Como se diz "galinha" em alemão?</div>
+    <button onclick="showAnswer('answer54')">Mostrar Resposta</button>
+    <p id="answer54" class="answer">Henne</p>
+
+    <div class="question">Como se diz "coelho" em alemão?</div>
+    <button onclick="showAnswer('answer55')">Mostrar Resposta</button>
+    <p id="answer55" class="answer">Kaninchen</p>
+
+    <div class="question">Como se diz "rato" em alemão?</div>
+    <button onclick="showAnswer('answer56')">Mostrar Resposta</button>
+    <p id="answer56" class="answer">Maus</p>
+
+    <div class="question">Como se diz "cobra" em alemão?</div>
+    <button onclick="showAnswer('answer57')">Mostrar Resposta</button>
+    <p id="answer57" class="answer">Schlange</p>
+
+    <div class="question">Como se diz "sapo" em alemão?</div>
+    <button onclick="showAnswer('answer58')">Mostrar Resposta</button>
+    <p id="answer58" class="answer">Frosch</p>
+
+    <div class="question">Como se diz "pato" em alemão?</div>
+    <button onclick="showAnswer('answer59')">Mostrar Resposta</button>
+    <p id="answer59" class="answer">Ente</p>
+
+    <div class="question">Como se diz "ganso" em alemão?</div>
+    <button onclick="showAnswer('answer60')">Mostrar Resposta</button>
+    <p id="answer60" class="answer">Gans</p>
+
+    <div class="question">Como se diz "avestruz" em alemão?</div>
+    <button onclick="showAnswer('answer61')">Mostrar Resposta</button>
+    <p id="answer61" class="answer">Strauß</p>
+
+    <div class="question">Como se diz "pomba" em alemão?</div>
+    <button onclick="showAnswer('answer62')">Mostrar Resposta</button>
+    <p id="answer62" class="answer">Taube</p>
+
+    <div class="question">Como se diz "pescador" em alemão?</div>
+    <button onclick="showAnswer('answer63')">Mostrar Resposta</button>
+    <p id="answer63" class="answer">Fischer</p>
+
+    <div class="question">Como se diz "caçador" em alemão?</div>
+    <button onclick="showAnswer('answer64')">Mostrar Resposta</button>
+    <p id="answer64" class="answer">Jäger</p>
+
+    <div class="question">Como se diz "fazenda" em alemão?</div>
+    <button onclick="showAnswer('answer65')">Mostrar Resposta</button>
+    <p id="answer65" class="answer">Bauernhof</p>
+
+    <div class="question">Como se diz "campo" em alemão?</div>
+    <button onclick="showAnswer('answer66')">Mostrar Resposta</button>
+    <p id="answer66" class="answer">Feld</p>
+
+    <div class="question">Como se diz "floresta" em alemão?</div>
+    <button onclick="showAnswer('answer67')">Mostrar Resposta</button>
+    <p id="answer67" class="answer">Wald</p>
+
+    <div class="question">Como se diz "praia" em alemão?</div>
+    <button onclick="showAnswer('answer68')">Mostrar Resposta</button>
+    <p id="answer68" class="answer">Strand</p>
+
+    <div class="question">Como se diz "montanha" em alemão?</div>
+    <button onclick="showAnswer('answer69')">Mostrar Resposta</button>
+    <p id="answer69" class="answer">Berg</p>
+
+    <div class="question">Como se diz "lago" em alemão?</div>
+    <button onclick="showAnswer('answer70')">Mostrar Resposta</button>
+    <p id="answer70" class="answer">See</p>
+
+    <div class="question">Como se diz "rio" em alemão?</div>
+    <button onclick="showAnswer('answer71')">Mostrar Resposta</button>
+    <p id="answer71" class="answer">Fluss</p>
+
+    <div class="question">Como se diz "oceano" em alemão?</div>
+    <button onclick="showAnswer('answer72')">Mostrar Resposta</button>
+    <p id="answer72" class="answer">Ozean</p>
+
+    <div class="question">Como se diz "praia" em alemão?</div>
+    <button onclick="showAnswer('answer73')">Mostrar Resposta</button>
+    <p id="answer73" class="answer">Strand</p>
+
+    <div class="question">Como se diz "deserto" em alemão?</div>
+    <button onclick="showAnswer('answer74')">Mostrar Resposta</button>
+    <p id="answer74" class="answer">Wüste</p>
+
+    <div class="question">Como se diz "planície" em alemão?</div>
+    <button onclick="showAnswer('answer75')">Mostrar Resposta</button>
+    <p id="answer75" class="answer">Ebene</p>
+
+    <div class="question">Como se diz "ilha" em alemão?</div>
+    <button onclick="showAnswer('answer76')">Mostrar Resposta</button>
+    <p id="answer76" class="answer">Insel</p>
+
+    <div class="question">Como se diz "litoral" em alemão?</div>
+    <button onclick="showAnswer('answer77')">Mostrar Resposta</button>
+    <p id="answer77" class="answer">Küste</p>
+
+    <div class="question">Como se diz "vulcão" em alemão?</div>
+    <button onclick="showAnswer('answer78')">Mostrar Resposta</button>
+    <p id="answer78" class="answer">Vulkan</p>
+
+    <div class="question">Como se diz "terremoto" em alemão?</div>
+    <button onclick="showAnswer('answer79')">Mostrar Resposta</button>
+    <p id="answer79" class="answer">Erdbeben</p>
+
+    <div class="question">Como se diz "tsunami" em alemão?</div>
+    <button onclick="showAnswer('answer80')">Mostrar Resposta</button>
+    <p id="answer80" class="answer">Tsunami</p>
+
+    <div class="question">Como se diz "raio" em alemão?</div>
+    <button onclick="showAnswer('answer81')">Mostrar Resposta</button>
+    <p id="answer81" class="answer">Blitz</p>
+
+    <div class="question">Como se diz "relâmpago" em alemão?</div>
+    <button onclick="showAnswer('answer82')">Mostrar Resposta</button>
+    <p id="answer82" class="answer">Gewitter</p>
+
+    <div class="question">Como se diz "nevoeiro" em alemão?</div>
+    <button onclick="showAnswer('answer83')">Mostrar Resposta</button>
+    <p id="answer83" class="answer">Nebel</p>
+
+    <div class="question">Como se diz "nevasca" em alemão?</div>
+    <button onclick="showAnswer('answer84')">Mostrar Resposta</button>
+    <p id="answer84" class="answer">Schneesturm</p>
+
+    <div class="question">Como se diz "granizo" em alemão?</div>
+    <button onclick="showAnswer('answer85')">Mostrar Resposta</button>
+    <p id="answer85" class="answer">Hagel</p>
+
+    <div class="question">Como se diz "tempestade" em alemão?</div>
+    <button onclick="showAnswer('answer86')">Mostrar Resposta</button>
+    <p id="answer86" class="answer">Sturm</p>
+
+    <div class="question">Como se diz "furacão" em alemão?</div>
+    <button onclick="showAnswer('answer87')">Mostrar Resposta</button>
+    <p id="answer87" class="answer">Hurrikan</p>
+
+    <div class="question">Como se diz "tornado" em alemão?</div>
+    <button onclick="showAnswer('answer88')">Mostrar Resposta</button>
+    <p id="answer88" class="answer">Tornado</p>
+
+    <div class="question">Como se diz "fogo" em alemão?</div>
+    <button onclick="showAnswer('answer89')">Mostrar Resposta</button>
+    <p id="answer89" class="answer">Feuer</p>
+
+    <div class="question">Como se diz "lava" em alemão?</div>
+    <button onclick="showAnswer('answer90')">Mostrar Resposta</button>
+    <p id="answer90" class="answer">Lava</p>
+
+    <div class="question">Como se diz "explosão" em alemão?</div>
+    <button onclick="showAnswer('answer91')">Mostrar Resposta</button>
+    <p id="answer91" class="answer">Explosion</p>
+
+    <div class="question">Como se diz "incêndio" em alemão?</div>
+    <button onclick="showAnswer('answer92')">Mostrar Resposta</button>
+    <p id="answer92" class="answer">Brand</p>
+
+    <div class="question">Como se diz "acidente" em alemão?</div>
+    <button onclick="showAnswer('answer93')">Mostrar Resposta</button>
+    <p id="answer93" class="answer">Unfall</p>
+
+    <div class="question">Como se diz "desastre" em alemão?</div>
+    <button onclick="showAnswer('answer94')">Mostrar Resposta</button>
+    <p id="answer94" class="answer">Katastrophe</p>
+
+    <div class="question">Como se diz "catástrofe" em alemão?</div>
+    <button onclick="showAnswer('answer95')">Mostrar Resposta</button>
+    <p id="answer95" class="answer">Katastrophe</p>
+
+    <div class="question">Como se diz "ajuda" em alemão?</div>
+    <button onclick="showAnswer('answer96')">Mostrar Resposta</button>
+    <p id="answer96" class="answer">Hilfe</p>
+
+    <div class="question">Como se diz "emergência" em alemão?</div>
+    <button onclick="showAnswer('answer97')">Mostrar Resposta</button>
+    <p id="answer97" class="answer">Notfall</p>
+
+    <div class="question">Como se diz "socorro" em alemão?</div>
+    <button onclick="showAnswer('answer98')">Mostrar Resposta</button>
+    <p id="answer98" class="answer">Hilfe</p>
+
+    <div class="question">Como se diz "resgate" em alemão?</div>
+    <button onclick="showAnswer('answer99')">Mostrar Resposta</button>
+    <p id="answer99" class="answer">Rettung</p>
+
+    <div class="question">Como se diz "emergencial" em alemão?</div>
+    <button onclick="showAnswer('answer100')">Mostrar Resposta</button>
+    <p id="answer100" class="answer">Notfall</p>
+
+    <script>
+        function showAnswer(answerId) {
+            var answer = document.getElementById(answerId);
+            answer.style.display = "block";
+        }
+    </script>
 </body>
 </html>
